@@ -122,7 +122,7 @@ fun setupCages(): MutableList<String> {
 fun placeMonkeyInCage(cageList: MutableList<String>, cageNum: Int, name: String) {
     println("+++ Putting $name into cage $cageNum")
 
-    check(false)    // REPLACE THIS WITH YOUR CODE!
+    cageList[cageNum - 1] = name
 }
 
 
@@ -138,8 +138,10 @@ fun placeMonkeyInCage(cageList: MutableList<String>, cageNum: Int, name: String)
  */
 fun listAllCages(cageList: List<String>) {
     println("CAGES")
+    for (i in 0..<cageList.size) {
+        println("Cage ${i + 1}: ${cageList[i]}")
 
-    check(false)    // REPLACE THIS WITH YOUR CODE!
+    }
 }
 
 
@@ -155,7 +157,21 @@ fun listAllCages(cageList: List<String>) {
 fun listAllMonkeys(cageList: List<String>) {
     println("MONKEYS")
 
-    check(false)    // REPLACE THIS WITH YOUR CODE!
+    for (i in 0..<cageList.size) {
+        println("-  ${cageList[i]}")
+    //################################################################################     CONTINUE FROM HERE
+        //################################################################################ CONTINUE FROM HERE
+        //################################################################################ CONTINUE FROM HERE
+        //################################################################################ CONTINUE FROM HERE
+        //################################################################################ CONTINUE FROM HERE
+        //################################################################################ CONTINUE FROM HERE
+        //################################################################################ CONTINUE FROM HERE
+        //################################################################################ CONTINUE FROM HERE
+        //################################################################################ CONTINUE FROM HERE
+        //################################################################################ CONTINUE FROM HERE
+        //################################################################################ CONTINUE FROM HERE
+
+    }
 }
 
 
