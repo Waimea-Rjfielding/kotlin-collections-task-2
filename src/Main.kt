@@ -157,21 +157,29 @@ fun listAllCages(cageList: List<String>) {
 fun listAllMonkeys(cageList: List<String>) {
     println("MONKEYS")
 
-    for (i in 0..<cageList.size) {
-        println("-  ${cageList[i]}")
-    //################################################################################     CONTINUE FROM HERE
-        //################################################################################ CONTINUE FROM HERE
-        //################################################################################ CONTINUE FROM HERE
-        //################################################################################ CONTINUE FROM HERE
-        //################################################################################ CONTINUE FROM HERE
-        //################################################################################ CONTINUE FROM HERE
-        //################################################################################ CONTINUE FROM HERE
-        //################################################################################ CONTINUE FROM HERE
-        //################################################################################ CONTINUE FROM HERE
-        //################################################################################ CONTINUE FROM HERE
-        //################################################################################ CONTINUE FROM HERE
+    for (monkey in cageList) {
 
+        if (monkey != EMPTY){
+            println("-  $monkey")
+        }
     }
+
+//    Alternate ways of doing the above;
+//
+//    for ((i, monkey) in cageList.withIndex()) {
+//
+//        if (monkey != EMPTY){
+//            println("-  $monkey is in cage ${i+1}")
+//        }
+//    }
+
+
+//    for (i in 0..<cageList.size) {
+//
+//        if (cageList[i] != EMPTY) {
+//            println("-  ${cageList[i]}")
+//        }
+//    }
 }
 
 
@@ -186,7 +194,12 @@ fun listAllMonkeys(cageList: List<String>) {
 fun listEmptyCages(cageList: List<String>) {
     println("EMPTY CAGES")
 
-    check(false)    // REPLACE THIS WITH YOUR CODE!
+    for (i in 0..<cageList.size) {
+
+        if (cageList[i] == EMPTY) {
+            println("Cage number ${i+1} is empty")
+        }
+    }
 }
 
 
@@ -205,7 +218,15 @@ fun listEmptyCages(cageList: List<String>) {
 fun listAllMonkeysAndCages(cageList: List<String>) {
     println("MONKEYS & CAGES")
 
-    check(false)    // REPLACE THIS WITH YOUR CODE!
+        for (i in 0..<cageList.size) {
+
+            if (cageList[i] != EMPTY) {
+                println("Cage ${i+1} has no monkey")
+            }
+            println("Cage ${i+1} has monkey  ${cageList[i]}")
+        }
+
+    }
 }
 
 
