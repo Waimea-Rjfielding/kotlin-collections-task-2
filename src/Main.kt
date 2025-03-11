@@ -1,3 +1,5 @@
+@file:Suppress("NAME_SHADOWING")
+
 /**
  * Kotlin Collections Task 2 - Monkeys in Cages
  *
@@ -220,23 +222,25 @@ fun listAllMonkeysAndCages(cageList: List<String>) {
 
         for (i in 0..<cageList.size) {
 
-            if (cageList[i] != EMPTY) {
+            if (cageList[i] == EMPTY) {
                 println("Cage ${i+1} has no monkey")
             }
-            println("Cage ${i+1} has monkey  ${cageList[i]}")
+            if (cageList[i] != EMPTY) {
+                println("Cage ${i+1} has monkey ${cageList[i]}")
+            }
         }
 
     }
-}
 
 
 /**
  * Returns the number of monkeys found in the given cage list
  */
 fun monkeyCount(cageList: List<String>): Int {
-
-    return 0    // REPLACE THIS WITH YOUR CODE!
+    
+    return cageList.size - {cageList.count { it.isEmpty() }}
 }
+
 
 
 /**
@@ -260,8 +264,22 @@ fun emptyCount(cageList: List<String>): Int {
  * Tip: the String.padEnd(N) function will help you here
  */
 fun showMonkeyCages(cageList: List<String>) {
+    println("MONKEY CAGES")
+    println()
+    println("+--------+--------+--------+--------+--------+--------+--------+--------+")
+    for (i in 0..<cageList.size) {
+        print("| Cage ${i + 1} ") //this would not work in any font other than monospaced
 
-    check(false)    // REPLACE THIS WITH YOUR CODE!
+    }
+    println("|")
+    println("+--------+--------+--------+--------+--------+--------+--------+--------+")
+    for (i in 0..<cageList.size) {
+        print("| ${cageList[i].padEnd(7)}")
+
+    }
+    println("|")
+    println("+--------+--------+--------+--------+--------+--------+--------+--------+")
+
 }
 
 
